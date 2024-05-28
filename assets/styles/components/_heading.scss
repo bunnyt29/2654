@@ -1,0 +1,14 @@
+.heading {
+    margin: 0 auto;
+    width: 541px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 500px){
+    .heading {
+        width: 311px;
+    }
+}

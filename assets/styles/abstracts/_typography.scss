@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    --font-primary: "Rubik", sans-serif;
+
+    /* type scale */
+    --text-xxs: 0.625em;
+    --text-xs: 0.8125em;
+    --text-sm: 0.875em;
+    --text-md: 1em;
+    --text-lg: 1.125em;
+    --text-xl: 1.25em;
+    --text-xxl: 2em;
+    --text-xxxl: 3em;
+    --text-xxxxl: 9.375em;
+
+    --light: 300;
+    --regular: 400;
+    --medium: 500;
+    --semi-bold: 600;
+    --bold: 700;
+
+    span, button, a, p, h6, h5, h4, h3, h2, h1 {
+        font-family: var(--font-primary);
+    }
+
+    a {
+        font-size: var(--text-md);
+        color: var(--color-text);
+    }
+
+    p {
+        font-size: var(--text-lg);
+        font-weight: var(--regular);
+        color: var(--color-text);
+    }
+
+    h6, h5, h4, h3, h2, h1 {
+        color: var(--color-text-heading);
+        font-weight: var(--medium);
+    }
+
+    h1 {
+        font-size: var(--text-xxxl);
+        line-height: 52px;
+    }
+
+    h2 {
+        font-size: var(--text-xxl);
+    }
+
+    h3 {
+        font-size: var(--text-xl);
+    }
+}
+
+@media only screen and (max-width: 500px){
+    :root {
+        --text-lg: 0.9375em;
+        --text-xxl: 1.5em;
+        --text-xxxl: 1.875em;
+
+        h1 {
+            line-height: 40px;
+        }
+    }
+}

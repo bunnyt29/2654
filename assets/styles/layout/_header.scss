@@ -1,0 +1,42 @@
+header {
+    position: relative;
+    margin-top: 104px;
+    padding-inline: 165px 103px;
+    display: flex;
+    align-items: center;
+
+    .header-heading {
+
+        p {
+            margin-top: 14px
+        }
+
+        &-buttons {
+            margin-top: 42px;
+            display: flex;
+            gap: 16px;
+        }
+    }
+}
+
+@media only screen and (max-width: 500px){
+    header {
+        margin-top: 80px;
+        padding-inline: var(--wrapper);
+        flex-direction: column-reverse;
+
+        .header-heading {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+
+            &-buttons {
+                justify-content: center;
+            }
+
+            p {
+                margin-top: 16px;
+            }
+        }
+    }
+}

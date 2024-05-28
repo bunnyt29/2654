@@ -1,0 +1,48 @@
+.contact-us {
+    margin-top: 150px;
+    padding-inline: 499px;
+    padding-block: 58px 74px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
+    background: var(--color-primary);
+    text-align: center;
+
+    h2, span {
+        color: white;
+    }
+
+    &-form {
+        display: flex;
+        gap: 16px;
+
+        input {
+            padding: 10px 100px 10px 20px;
+            background-color: var(--white);
+            border: none;
+            border-radius: var(--primary-border-radius);
+        }
+
+        button {
+            text-transform: capitalize;
+        }
+
+        ::placeholder {
+            padding: 0;
+            font-size: var(--text-sm);
+        }
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .contact-us {
+        padding-inline: var(--wrapper);
+        gap: 12px;
+
+        &-form {
+            margin-top: 20px;
+            flex-direction: column;
+        }
+    }
+}

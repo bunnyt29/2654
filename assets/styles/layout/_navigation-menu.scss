@@ -1,0 +1,109 @@
+.nav-menu {
+    margin-top: 48px;
+    padding-inline: var(--wrapper);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .topnav-open {
+        display: none;
+    }
+
+    .topnav-open[aria-expanded='true'] {
+        + .topnav-menu {
+            transform: translateX(0);
+        }
+      }
+
+    .topnav-menu {
+        .topnav-menu-logo-and-close-button {
+            display: none;
+        }
+
+        &-links {
+            display: flex;
+            align-items: center;
+            gap: 48px;
+
+            &-link {
+                a {
+                    font-size: var(--text-xs);
+                    color: var(--color-heading);
+                    text-transform: uppercase;
+                }
+
+                a:hover {
+                    color: var(--color-secondary);
+                }
+                button {
+                    text-transform: uppercase;
+                }
+                button:hover {
+                    background-color: var(--white);
+                    border: 2px solid var(--color-secondary);
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .nav-menu {
+        .topnav-open {
+            display: block;
+        }
+
+        .topnav-menu {
+            height: 100vh;
+            width: 100vw;
+            margin: 0;
+            padding-top: 50px;
+            padding-inline: var(--wrapper);
+            position: fixed;
+            inset: 0;
+            z-index: 10;
+            background: #242a45eb;
+            transform: translateX(100vw);
+            transition: translate 0.5s ease-in-out;
+
+            .topnav-menu-logo-and-close-button {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+    
+            &-links {
+                padding-left: 0;
+                margin-top: 40px;
+                flex-direction: column;
+                gap: 0;
+
+                &-link {
+                    width: 100%;
+                    padding-block: 25px;
+                    border-top: 1px solid rgba(255, 255, 255, 0.416);
+                    text-align: center;
+
+                    a {
+                        font-size: 20px;
+                        color: white;
+                    }
+
+                    button {
+                        width: 100%;
+                        background: none;
+                        border: 1px solid var(--white);
+                    }
+                }
+            }
+
+            &-social-medias {
+                position: absolute;
+                bottom: 48px;
+                right: 40%;
+                display: flex;
+                gap: 40px;
+            }
+        }
+    }
+}
